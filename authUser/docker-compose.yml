@@ -7,12 +7,11 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: "postgres"
-      POSTGRES_DB: ead-authuser
       PGDATA: ./data/postgres
     ports:
       - "15432:5432"
     volumes:
-      - /home/tito/volumePostgreSQL_auth:/var/lib/postgresql/data 
+      - /home/tito/volumePostgreSQL:/var/lib/postgresql/data 
     networks:
       - postgres-compose-network
       
